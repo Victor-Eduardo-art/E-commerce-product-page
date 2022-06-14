@@ -1,44 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js"></script>
   <title>Frontend Mentor | E-commerce product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
+  <header>
+    <div class="secao-esq">
+      <a href="#"><img src="images/logo.svg" class="logo-site" alt="logo do site"></a>
   
-  <div class="attribution">
+      <nav>
+        <a href="#" class="link-menu">Collections</a>
+        <a href="#" class="link-menu">Men</a>
+        <a href="#" class="link-menu">Women</a>
+        <a href="#" class="link-menu">About</a>
+        <a href="#" class="link-menu">Contact</a>
+      </nav>
+    </div>
+
+    <div class="secao-dir">
+			<span id="qtd-produto" class="none">0</span>
+      <a href="#" class="icone-historico"><img src="images/icon-cart-black.svg  " alt="ícone de compras"></a>
+
+      <img src="images/image-avatar.png" class="icone-perfil" alt="perfil">
+
+      <div class="ver-compras aviso-compras none">
+				<header>
+					<h2>Cart</h2>
+				</header>
+
+				<p>Your cart is empty</p>
+
+
+        <div class="produto none">
+        	<img src="images/image-product-1.jpg" alt="foto do produto Product Name">
+
+          <div class="ctr-info-produto">
+						<h3>Fall Limited Edition Sneakers</h3>
+
+						<span>$100,00 x 3 <em>$300,00</em></span>
+          </div>
+
+          <img id="icone-delete" src="images/icon-delete.svg" alt="ícone tirar produto do carrinho">
+        </div>
+
+				<button id="btn-comprar" class="none">Checkout</button>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <div class="visualiza-produtos">
+      <img src="images/image-product-1-thumbnail.jpg" class="img-produto-ativo" alt="capa do produto">
+
+      <div class="container-selec-img-produtos">
+        <img src="images/image-product-1.jpg" class="selec-img-produto" alt="imagem do produto 1">
+        <img src="images/image-product-2.jpg" class="selec-img-produto" alt="imagem do produto 2">
+        <img src="images/image-product-3.jpg" class="selec-img-produto" alt="imagem do produto 3">
+        <img src="images/image-product-4.jpg" class="selec-img-produto" alt="imagem do produto 4">
+      </div>
+    </div>
+
+    <div class="info-produto">
+      <span class="nome-empresa">Sneaker Company</span>
+    
+      <h1>Fall Limited Edition Sneakers</h1>
+    
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+      durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    
+      <div class="ctr-preco-atual">
+        <h2>$125.00</h2>
+        <span>50%</span>
+      </div>
+
+      <span class="preco-anterio">$250.00</span>
+      
+      <div class="ctr-botoes-produto">
+        <!-- essa div vai ter os botões de aumentar, diminuir a quantidade do produto e vai ter também o visualizador de quantidade e o botão de comprar -->
+
+        <div class="ctr-botoes-esq">
+          <button class="btm-controlar-unidades" id="diminuir-unidades"><img src="images/icon-minus.svg" alt="botão para diminuir as unidades do produto"></button>
+    
+          <span id="quantidade-produtos">0</span>
+    
+          <button class="btm-controlar-unidades" id="aumentar-unidades"><img src="images/icon-plus.svg" alt="botão para aumentar as unidades do produto"></button>
+        </div>
+        
+        <button id="comprar-produto"><img src="images/icon-cart-white.svg" alt="ícone de compras"> Add to cart</button>
+      </div>
+    </div>
+  </main>
+  
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="#">Victor Eduardo Art</a>.
+  </div> -->
 </body>
 </html>
