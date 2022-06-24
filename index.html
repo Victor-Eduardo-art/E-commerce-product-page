@@ -17,30 +17,36 @@
   </style> -->
 </head>
 <body>
-  <div class="container-slider">
+  <div class="fundo-escuro none"></div>
 
+  <div class="container-slider none">
     
-    <img class="botao-voltar" src="images/icon-close.svg" alt="botão voltar">
+    <img id="botao-voltar" src="images/icon-close.svg" alt="botão voltar">
     <div class="slider">
-      <img src="images/icon-previous.svg" alt="botão imagem anterior">
+      <button class="botao-anterior"><img src="images/icon-previous.svg" alt="botão imagem anterior"></button>
   
       <img class="imagem-focada" src="images/image-product-1-thumbnail.jpg" alt="imagem focada">
   
-      <img src="images/icon-next.svg" alt="botão imagem anterior">
+      <button class="botao-proxima"><img src="images/icon-next.svg" alt="botão imagem anterior"></button>
     </div>
 
     <div class="ctr-lista-imagens">
-      <img src="images/image-product-1.jpg" class="selec-img-produto" alt="imagem do produto 1">
-      <img src="images/image-product-2.jpg" class="selec-img-produto" alt="imagem do produto 2">
-      <img src="images/image-product-3.jpg" class="selec-img-produto" alt="imagem do produto 3">
-      <img src="images/image-product-4.jpg" class="selec-img-produto" alt="imagem do produto 4">
+      <div data-src="images/image-product-1.jpg" class="selec-img-produto img-1 img-focada"></div>
+      <div data-src="images/image-product-2.jpg" class="selec-img-produto img-2"></div>
+      <div data-src="images/image-product-3.jpg" class="selec-img-produto img-3"></div>
+      <div data-src="images/image-product-4.jpg" class="selec-img-produto img-4"></div>
     </div>
   </div>
+
   <header>
     <div class="secao-esq">
+      <img src="images/icon-menu.svg" alt="botão menu" class="botao-menu">
+
       <a href="#"><img src="images/logo.svg" class="logo-site" alt="logo do site"></a>
   
       <nav>
+        <img src="images/icon-close-dark-grayish-blue.svg" alt="botão fechar" class="botao-fechar none">  
+
         <a href="#" class="link-menu">Collections</a>
         <a href="#" class="link-menu">Men</a>
         <a href="#" class="link-menu">Women</a>
@@ -50,8 +56,10 @@
     </div>
 
     <div class="secao-dir">
-			<span id="qtd-produto" class="none">0</span>
-      <a href="#" class="icone-historico"><img src="images/icon-cart-black.svg  " alt="ícone de compras"></a>
+      <div class="container-icone-historico">
+        <span id="qtd-produto" class="none">0</span>
+        <a href="#" class="icone-historico"><img src="images/icon-cart-black.svg  " alt="ícone de compras"></a>
+      </div>
 
       <img src="images/image-avatar.png" class="icone-perfil" alt="perfil">
 
@@ -60,30 +68,37 @@
 					<h2>Cart</h2>
 				</header>
 
-				<p>Your cart is empty</p>
+        <div class="conteudo">
+          <p>Your cart is empty</p>
 
+          <div class="produto none">
 
-        <div class="produto none">
-        	<img src="images/image-product-1.jpg" alt="foto do produto Product Name">
-
-          <div class="ctr-info-produto">
-						<h3>Fall Limited Edition Sneakers</h3>
-
-						<span>$100,00 x 3 <em>$300,00</em></span>
+            <div class="alinhar-produto">
+              <img src="images/image-product-1.jpg" alt="foto do produto Product Name" class="img-produto">
+    
+              <div class="ctr-info-produto">
+                <h3>Fall Limited Edition Sneakers</h3>
+    
+                <span>$100,00 x 3 <em>$300,00</em></span>
+              </div>
+            </div>
+  
+            <img id="icone-delete" src="images/icon-delete.svg" alt="ícone tirar produto do carrinho">
           </div>
-
-          <img id="icone-delete" src="images/icon-delete.svg" alt="ícone tirar produto do carrinho">
+  
+          <button id="btn-comprar" class="none">Checkout</button>
         </div>
-
-				<button id="btn-comprar" class="none">Checkout</button>
       </div>
     </div>
-
   </header>
 
   <main>
     <div class="visualiza-produtos">
-      <img src="images/image-product-1-thumbnail.jpg" class="img-produto-ativo" alt="capa do produto">
+      <button class="botao-anterior"><img src="images/icon-previous.svg" alt="botão imagem anterior"></button>
+
+      <img src="images/image-product-1-thumbnail.jpg" class="img-produto-ativo imagem-focada" alt="capa do produto">
+
+      <button class="botao-proxima"><img src="images/icon-next.svg" alt="botão imagem anterior"></button>
 
       <div class="container-selec-img-produtos">
         <img src="images/image-product-1.jpg" class="selec-img-produto" alt="imagem do produto 1">
@@ -101,16 +116,16 @@
       <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
       durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
     
-      <div class="ctr-preco-atual">
-        <h2>125.00</h2>
-        <span>50%</span>
+      <div class="ctr-info-preco">
+        <div class="ctr-preco-atual">
+          <h2>125.00</h2>
+          <span>50%</span>
+        </div>
+  
+        <span class="preco-anterio">$250.00</span>
       </div>
-
-      <span class="preco-anterio">$250.00</span>
       
       <div class="ctr-botoes-produto">
-        <!-- essa div vai ter os botões de aumentar, diminuir a quantidade do produto e vai ter também o visualizador de quantidade e o botão de comprar -->
-
         <div class="ctr-botoes-esq">
           <button class="btm-controlar-unidades" id="diminuir-unidades"><img src="images/icon-minus.svg" alt="botão para diminuir as unidades do produto"></button>
     
